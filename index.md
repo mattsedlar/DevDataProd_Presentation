@@ -11,23 +11,11 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## What is the ACS?
+## Why Look at Commuting Methods by Income Groups?
 
-ACS stands for the American Community Survey.
+* The data set comes from the American Community Survey and is available to the public at [Data.Gov](http://www.data.gov/).
 
-From the dataset abstract:
-
-> An annual nationwide survey that collects information such as age, race, income, commute time to work, home value, veteran status, and other data.
-
-The data is open to the public and available through [Data.Gov](http://www.data.gov/). 
-
-This particular application uses the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
-
----
-
-## Why Commuting Methods by Income Groups?
-
-* The dataset includes statistics on everything from commuting method by age, sex, race to even citizenship status. 
+* I was particularly interested in the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
 
 * Since owning a vehicle is often considered a luxury item, I was curious about whether workers 16 years and over in lower income groups relied more on public transportation and carpooling while workers in higher income groups drove alone to work. But obviously it varies state by state, because some states have better public transportation options than others.
 
@@ -35,7 +23,7 @@ This particular application uses the [Means of Transportation to Work by Selecte
 
 ---
 
-## What the Data Looks Like
+## What the Data Looks Like (After Some Cleaning)
 
 
 
