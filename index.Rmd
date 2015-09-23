@@ -28,7 +28,9 @@ This particular application uses the [Means of Transportation to Work by Selecte
 ## Why Commuting Methods by Income Groups?
 
 * The dataset includes statistics on everything from commuting method by age, sex, race to even citizenship status. 
+
 * Since owning a vehicle is often considered a luxury item, I was curious about whether workers 16 years and over in lower income groups relied more on public transportation and carpooling while workers in higher income groups drove alone to work. But obviously it varies state by state, because some states have better public transportation options than others.
+
 * Why not build an app that helps conduct an exploratory analysis of the data?
 
 ---
@@ -77,7 +79,7 @@ colnames(tidydata) <- "Observation"
 
 ```
 
-Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels.
+Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here).
 
 ```{r echo=FALSE, cache=FALSE}
 library(knitr)
@@ -107,3 +109,28 @@ $S=T_d+T_c+T_p$
 Each bar in the chart represents: $\frac{T_d}{S},\frac{T_c}{S},\frac{T_p}{S}$
 
 ---
+
+## What the App Displays
+
+The app uses ggplot2's geom_bar and geom_errorbar to plot a results dataframe based on the calculations (see example below: Alabama and \\$1 to \\$9,999 or loss group). It also uses googleVis' gvisGeoChart to plot the state, mostly because it looks cool.
+
+```{r echo=FALSE, message=FALSE, cache=FALSE}
+
+    results.df <- data.frame(Method = as.factor(c("Drive Alone*",
+                                                  "Carpool",
+                                                  "Public Transportation**")),
+                             Percentage = c(0.864402019,
+                                            0.125831717,
+                                            0.009766264),
+                             `Upper Margin` = c(0.8968983,
+                                                0.1357138,
+                                                0.0120998),
+                             `Lower Margin` = c(0.831905703,
+                                                0.115949645,
+                                                0.007432732))
+  kable(results.df)
+
+```
+
+![alt text][id]
+[id]: assets/img/screenshot.png "Screenshot"

@@ -28,7 +28,9 @@ This particular application uses the [Means of Transportation to Work by Selecte
 ## Why Commuting Methods by Income Groups?
 
 * The dataset includes statistics on everything from commuting method by age, sex, race to even citizenship status. 
+
 * Since owning a vehicle is often considered a luxury item, I was curious about whether workers 16 years and over in lower income groups relied more on public transportation and carpooling while workers in higher income groups drove alone to work. But obviously it varies state by state, because some states have better public transportation options than others.
+
 * Why not build an app that helps conduct an exploratory analysis of the data?
 
 ---
@@ -37,7 +39,7 @@ This particular application uses the [Means of Transportation to Work by Selecte
 
 
 
-Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels.
+Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here).
 
 
 |                   |Observation |
@@ -76,3 +78,16 @@ Each bar in the chart represents: $\frac{T_d}{S},\frac{T_c}{S},\frac{T_p}{S}$
 
 ---
 
+## What the App Displays
+
+The app uses ggplot2's geom_bar and geom_errorbar to plot a results dataframe based on the calculations (see example below: Alabama and \\$1 to \\$9,999 or loss group). It also uses googleVis' gvisGeoChart to plot the state, mostly because it looks cool.
+
+
+|Method                  | Percentage| Upper.Margin| Lower.Margin|
+|:-----------------------|----------:|------------:|------------:|
+|Drive Alone*            |  0.8644020|    0.8968983|    0.8319057|
+|Carpool                 |  0.1258317|    0.1357138|    0.1159496|
+|Public Transportation** |  0.0097663|    0.0120998|    0.0074327|
+
+![alt text][id]
+[id]: assets/img/screenshot.png "Screenshot"
