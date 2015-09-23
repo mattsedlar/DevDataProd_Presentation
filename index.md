@@ -75,3 +75,4 @@ $S=T_d+T_c+T_p$
 Each bar in the chart represents: $\frac{T_d}{S},\frac{T_c}{S},\frac{T_p}{S}$
 
 ---
+
