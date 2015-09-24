@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Commuting Methods by State, Income</title>
+  <title>Commuting Methods by State, Income Group</title>
   <meta charset="utf-8">
-  <meta name="description" content="Commuting Methods by State, Income">
+  <meta name="description" content="Commuting Methods by State, Income Group">
   <meta name="author" content="Matthew Sedlar">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Commuting Methods by State, Income</h1>
+    <h1>Commuting Methods by State, Income Group</h1>
     <h2>Creating an interactive Shiny app using 2014 ACS data</h2>
     <p>Matthew Sedlar<br/></p>
   </hgroup>
@@ -45,13 +45,19 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Why Look at Commuting Methods by Income Groups?</h2>
+    <h2>Why Look at Commuting Methods by Income?</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>The data set comes from the American Community Survey and is available to the public at <a href="http://www.data.gov/">Data.Gov</a>.</p></li>
-<li><p>I was particularly interested in the <a href="http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000">Means of Transportation to Work by Selected Characteristics for Workplace Geography</a> 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.</p></li>
-<li><p>Since owning a vehicle is often considered a luxury item, I was curious about whether workers 16 years and over in lower income groups relied more on public transportation and carpooling while workers in higher income groups drove alone to work. But obviously it varies state by state, because some states have better public transportation options than others.</p></li>
+    <p><strong>ACCESSIBLE DATA</strong>: </p>
+
+<ul>
+<li>The data set comes from the American Community Survey and is available to the public at <a href="http://www.data.gov/">Data.Gov</a>. The data I was looking for is in the <a href="http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000">Means of Transportation to Work by Selected Characteristics for Workplace Geography</a> 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.</li>
+</ul>
+
+<p><strong>INTERESTING TOPIC</strong>:</p>
+
+<ul>
+<li><p>Since owning a vehicle can be considered a luxury or necessity depending on the region, I was curious about commuting methods of workers 16 years and over in lower income groups, whether they relied more on public transportation and carpooling, and workers in higher income groups. I couldn&#39;t look at the data by city, which would be ideal, but I could break down estimates by state.</p></li>
 <li><p>Why not build an app that helps conduct an exploratory analysis of the data?</p></li>
 </ul>
 
@@ -64,7 +70,7 @@
     <h2>What the Data Looks Like (After Some Cleaning)</h2>
   </hgroup>
   <article data-timings="">
-    <p>Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here).</p>
+    <p>Below is a data frame (transposed to fit the slide) of the state of Alabama and the estimated percentage (in decimals) of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here) and a margin of error for each variable.</p>
 
 <table><thead>
 <tr>
@@ -193,7 +199,7 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Why Look at Commuting Methods by Income Groups?'>
+        data-slide=1 title='Why Look at Commuting Methods by Income?'>
          1
       </a>
     </li>

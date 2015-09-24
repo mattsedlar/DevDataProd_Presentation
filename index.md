@@ -1,5 +1,5 @@
 ---
-title       : Commuting Methods by State, Income
+title       : Commuting Methods by State, Income Group
 subtitle    : Creating an interactive Shiny app using 2014 ACS data
 author      : Matthew Sedlar
 job         : 
@@ -11,13 +11,15 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Why Look at Commuting Methods by Income Groups?
+## Why Look at Commuting Methods by Income?
 
-* The data set comes from the American Community Survey and is available to the public at [Data.Gov](http://www.data.gov/).
+__ACCESSIBLE DATA__: 
 
-* I was particularly interested in the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
+* The data set comes from the American Community Survey and is available to the public at [Data.Gov](http://www.data.gov/). The data I was looking for is in the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
 
-* Since owning a vehicle is often considered a luxury item, I was curious about whether workers 16 years and over in lower income groups relied more on public transportation and carpooling while workers in higher income groups drove alone to work. But obviously it varies state by state, because some states have better public transportation options than others.
+__INTERESTING TOPIC__:
+
+* Since owning a vehicle can be considered a luxury or necessity depending on the region, I was curious about commuting methods of workers 16 years and over in lower income groups, whether they relied more on public transportation and carpooling, and workers in higher income groups. I couldn't look at the data by city, which would be ideal, but I could break down estimates by state.
 
 * Why not build an app that helps conduct an exploratory analysis of the data?
 
@@ -27,7 +29,7 @@ knit        : slidify::knit2slides
 
 
 
-Below is a data frame (transposed with margins of error excluded to fit the slide) of the state of Alabama and the estimated percentage of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here).
+Below is a data frame (transposed to fit the slide) of the state of Alabama and the estimated percentage (in decimals) of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here) and a margin of error for each variable.
 
 
 |                   |Observation |
