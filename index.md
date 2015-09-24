@@ -13,37 +13,37 @@ knit        : slidify::knit2slides
 
 ## Why Look at Commuting Methods by Income?
 
-__ACCESSIBLE DATA__: 
-
-* The data set comes from the American Community Survey and is available to the public at [Data.Gov](http://www.data.gov/). The data I was looking for is in the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
-
 __INTERESTING TOPIC__:
 
-* Since owning a vehicle can be considered a luxury or necessity depending on the region, I was curious about commuting methods of workers 16 years and over in lower income groups, whether they relied more on public transportation and carpooling, and workers in higher income groups. I couldn't look at the data by city, which would be ideal, but I could break down estimates by state.
+* Since owning a vehicle can be considered a luxury or necessity depending on the region, I was curious about commuting methods of workers 16 years and over in lower-income groups, and whether they relied more on public transportation and carpooling, and workers in higher-income groups. I couldn't look at the data by city, which would be ideal, but I could break down estimates by state.
 
 * Why not build an app that helps conduct an exploratory analysis of the data?
 
+__ACCESSIBLE DATA__: 
+
+* The data set comes from the American Community Survey and is available to the public at [Data.Gov](http://www.data.gov/). The data I was looking for are in the [Means of Transportation to Work by Selected Characteristics for Workplace Geography](http://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/S0804/0100000US.04000) 2014 American Community Survey 1-Year Estimates from the U.S. Census Bureau.
+
 ---
 
-## What the Data Looks Like (After Some Cleaning)
+## What the Data Look Like (After Some Cleaning)
 
 
 
-Below is a data frame (transposed to fit the slide) of the state of Alabama and the estimated percentage (in decimals) of people who drove alone by income levels. The data also includes carpool and public transportation methods (not shown here) and a margin of error for each variable.
+Below is a data frame (transposed to fit the slide) for the state of Alabama and the estimated percentage (in decimals) of people who drove alone by income levels. The data also include carpool and public transportation methods (not shown here) and a margin of error for each variable.
 
 
-|                   |Observation |
-|:------------------|:-----------|
-|State              |Alabama     |
-|Total Drove Alone  |1681608     |
-|1 to 9,999 or loss |0.133       |
-|10,000 to.14.999   |0.084       |
-|15,000 to 24,999   |0.176       |
-|25,000 to 34,999   |0.155       |
-|35,000 to 49,999   |0.169       |
-|50,000 to 64,999   |0.111       |
-|65,000 to 74,999   |0.041       |
-|75,000 or more     |0.131       |
+|                          |Observation |
+|:-------------------------|:-----------|
+|State                     |Alabama     |
+|Total Drove Alone         |1681608     |
+|1 to 9,999 or lost income |0.133       |
+|10,000 to.14.999          |0.084       |
+|15,000 to 24,999          |0.176       |
+|25,000 to 34,999          |0.155       |
+|35,000 to 49,999          |0.169       |
+|50,000 to 64,999          |0.111       |
+|65,000 to 74,999          |0.041       |
+|75,000 or more            |0.131       |
 
 ---
 
@@ -70,7 +70,7 @@ Each bar in the chart represents: $\frac{T_d}{S},\frac{T_c}{S},\frac{T_p}{S}$
 
 ## What the App Displays
 
-The app uses ggplot2's geom_bar and geom_errorbar to plot a results dataframe based on the calculations (see example below: Alabama and \\$1 to \\$9,999 or loss group). It also uses googleVis' gvisGeoChart to plot the state, mostly because it looks cool.
+The app uses ggplot2's geom_bar and geom_errorbar to plot a results data frame based on the calculations (see example below: Alabama and \\$1 to \\$9,999 or lost income group). It also uses googleVis' gvisGeoChart to plot the state, mostly because that looks cool.
 
 
 |Method                  | Percentage| Upper.Margin| Lower.Margin|
