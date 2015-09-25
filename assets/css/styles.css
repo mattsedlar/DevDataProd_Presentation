@@ -1,6 +1,18 @@
 table {
-
   font-size: 15px;
   line-height: 25px;
+}
 
+article p, article li {
+  font-size: 18px;
+}
+
+article {
+  min-height: 100%;
+  margin-bottom: -140px;
+}
+
+footer {
+  font-size: 14px;
+  height: 50px;
 }
