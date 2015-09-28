@@ -1,5 +1,5 @@
 ---
-title       : Commuting Methods by State, Income Group
+title       : Commuting Methods by State, Income Group in the U.S.
 subtitle    : Creating an interactive Shiny app using 2014 ACS data
 author      : Matthew Sedlar
 job         : 
